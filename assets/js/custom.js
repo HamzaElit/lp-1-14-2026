@@ -134,6 +134,85 @@ window.addEventListener("load", function () {
         ScrollTrigger.refresh();
       });
     }
+
+    const awarenessShampoo = document.querySelector('.lp-hair-awareness-two__shampoo');
+    const awarenessSection = document.querySelector('.lp-hair-awareness-two');
+    const awarenessBasket =
+      document.querySelector('.lp-hair-awareness-two__image-two') ||
+      document.querySelector('.lp-hair-awareness-two__image');
+
+    if (awarenessShampoo && awarenessSection && awarenessBasket) {
+      const getOffsetTop = (element, parent) => {
+        let top = 0;
+        let current = element;
+        while (current && current !== parent) {
+          top += current.offsetTop;
+          current = current.offsetParent;
+        }
+        return top;
+      };
+
+      const calculateAwarenessEndY = () => {
+        const shampooHeight = awarenessShampoo.offsetHeight;
+        const shampooInitialTop = getOffsetTop(awarenessShampoo, awarenessSection);
+        const basketTop = getOffsetTop(awarenessBasket, awarenessSection);
+        const basketHeight = awarenessBasket.offsetHeight;
+        const targetY = basketTop + basketHeight - shampooInitialTop - shampooHeight - 200;
+        return targetY;
+      };
+      const calculateAwarenessEndMobile = () => {
+        const shampooHeight = awarenessShampoo.offsetHeight;
+        const shampooInitialTop = getOffsetTop(awarenessShampoo, awarenessSection);
+        const basketTop = getOffsetTop(awarenessBasket, awarenessSection);
+        const basketHeight = awarenessBasket.offsetHeight;
+        const targetY = basketTop + basketHeight - shampooInitialTop - shampooHeight - 100;
+        return targetY;
+      };
+
+      const awarenessMedia = gsap.matchMedia();
+
+      awarenessMedia.add("(min-width: 1024px)", () => {
+        gsap.set(awarenessShampoo, {
+          y: 0,
+          opacity: 1
+        });
+
+        gsap.to(awarenessShampoo, {
+          y: calculateAwarenessEndY,
+          ease: "none",
+          scrollTrigger: {
+            trigger: awarenessSection,
+            start: "-100% 110%",
+            end: "10% bottom",
+            scrub: 0.4,
+            invalidateOnRefresh: true
+          }
+        });
+      });
+
+      awarenessMedia.add("(max-width: 1023px)", () => {
+        gsap.set(awarenessShampoo, {
+          y: 0,
+          opacity: 1
+        });
+
+        gsap.to(awarenessShampoo, {
+          y: calculateAwarenessEndMobile,
+          ease: "none",
+          scrollTrigger: {
+            trigger: awarenessSection,
+            start: "10% 110%",
+            end: "80% bottom",
+            scrub: 1,
+            invalidateOnRefresh: true
+          }
+        });
+      });
+
+      window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+      });
+    }
   }
 
   // Initialize Swiper for testimonials

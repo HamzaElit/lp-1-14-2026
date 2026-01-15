@@ -64,6 +64,22 @@
       }
     }
   }
+  &__shampoo{
+    position: absolute;
+    width: 480px;
+    height: auto;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include lg-up {
+        width: 955px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
   &__image-two {
     width: 100%;
     position: absolute;
