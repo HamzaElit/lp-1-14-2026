@@ -88,9 +88,9 @@ window.addEventListener("load", function () {
         ease: "none",
         scrollTrigger: {
           trigger: sectionElement,
-          start: "10% 110%",
+          start: "0% 110%",
           end: "60% bottom",
-          scrub: 1,
+          scrub: 0.3,
           invalidateOnRefresh: true
         }
       });
