@@ -1,0 +1,92 @@
+
+.lp-hair-awareness-two {
+  padding-block: var(--block-gap);
+  background: var(--White-Bg);
+  overflow: hidden;
+  position: relative;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: var(--font-titles);
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 1.07;
+    letter-spacing: -0.096rem;
+    color: var(--Black);
+    margin: 0;
+    max-width: 31.3rem;
+
+    @include md-up {
+      max-width: 64rem;
+    }
+
+    @include lg-up {
+      font-size: 6.4rem;
+      letter-spacing: -0.192rem;
+      max-width: 118.1rem;
+    }
+
+    .highlight {
+      display: block;
+      color: var(--Blue);
+    }
+  }
+
+  &__image {
+    margin-top: 20rem;
+    width: 100%;
+
+
+    @include lg-up {
+      margin-top: 30rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 32rem;
+      height: auto;
+      margin: 0 auto;
+
+    //   @include md-up {
+    //     max-width: 50rem;
+    //   }
+
+      @include lg-up {
+        max-width: 63.5rem;
+      }
+    }
+  }
+  &__image-two {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+
+   
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 32rem;
+      height: auto;
+      margin: 0 auto;
+
+    //   @include md-up {
+    //     max-width: 50rem;
+    //   }
+
+      @include lg-up {
+        max-width: 63.5rem;
+      }
+    }
+  }
+}

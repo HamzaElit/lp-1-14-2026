@@ -1,6 +1,6 @@
 .lp-hair-awareness {
   padding: 80px 0;
-  background: #ffffff;
+  background: var(--White);
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.09);
   
   @media (min-width: 991px) {
@@ -20,12 +20,12 @@
   }
 
   &__text {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--font-titles);
     font-weight: 900;
     font-size: 52px;
     line-height: 0.868;
     letter-spacing: -1.56px;
-    color: #000000;
+    color: var(--Black);
     margin: 0;
     
     @media (min-width: 991px) {
@@ -34,7 +34,7 @@
     }
     
     .highlight {
-      color: #599bf1;
+      color: var(--Blue);
     }
     
     br {

@@ -1,6 +1,6 @@
 .lp-testmonial {
   padding: 200px 0 38px;
-  background: #f2f2f2;
+  background: var(--White-Bg);
   overflow: hidden;
   
   @media (max-width: 768px) {
@@ -12,7 +12,7 @@
     }
   }
   &__title {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--font-titles);
     width: min(100% - 6rem, 110rem);
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +34,7 @@
     }
     
     .highlight {
-      color: #599bf1;
+      color: var(--Blue);
     }
     
     .desktop-only {
@@ -105,11 +105,11 @@
     padding: 19px 0;
     width: 455px;
     max-width: 100%;
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--font-titles);
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
-    color: #ffffff;
+    color: var(--White);
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
@@ -129,11 +129,11 @@
   }
 
   &__cta-subtitle {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--font-titles);
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
-    color: #c9c9c9;
+    color: var(--Light-Grey);
     text-align: center;
     margin: 0;
     
@@ -280,11 +280,11 @@
   }
 
   &__name {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: var(--font-titles);
     font-weight: 600;
     font-size: 21.78px;
     line-height: 35.64px;
-    color: #ffffff;
+    color: var(--White);
     text-shadow: 0px 3.96px 3.96px rgba(0, 0, 0, 0.25);
     margin: 0;
     
