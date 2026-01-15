@@ -183,7 +183,7 @@ window.addEventListener("load", function () {
           scrollTrigger: {
             trigger: awarenessSection,
             start: "-100% 110%",
-            end: "0 bottom",
+            end: "-20% bottom",
             scrub: 0.4,
             invalidateOnRefresh: true
           }
