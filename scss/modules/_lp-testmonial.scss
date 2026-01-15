@@ -160,14 +160,13 @@
     
     @media (min-width: 769px) {
     transform: scale(0.8) !important;
-      
+    aspect-ratio:341 / 443;
       &.swiper-slide-active,
       &.swiper-slide-next,
       &.swiper-slide-prev {
         opacity: 1;
         transform: scale(1) !important;
         width: 100%;
-        aspect-ratio:341 / 443;
       }
     }
     
