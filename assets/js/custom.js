@@ -74,9 +74,8 @@ window.addEventListener("load", function () {
         // Shampoo's initial position from section top = contentTop + shampooTopCSS
         const shampooInitialTop = contentTop + shampooTopCSS;
         
-        // We want: shampooInitialTop + targetY + (shampooHeight / 2) = sectionHeight
-        // targetY = sectionHeight - shampooInitialTop - (shampooHeight / 2)
-        const targetY = sectionHeight - shampooInitialTop - (shampooHeight / 2) - 100;
+        // Move until the shampoo fully exits the section bottom
+        const targetY = sectionHeight - shampooInitialTop + shampooHeight;
         
         return targetY;
       };
@@ -88,8 +87,8 @@ window.addEventListener("load", function () {
         ease: "none",
         scrollTrigger: {
           trigger: sectionElement,
-          start: "0% 110%",
-          end: "60% bottom",
+          start: "top 110%",
+          end: "bottom 10%",
           scrub: 0.3,
           invalidateOnRefresh: true
         }
@@ -110,7 +109,7 @@ window.addEventListener("load", function () {
           const shampooTopCSS = parseInt(getComputedStyle(shampooElement).top) || 0;
           const shampooHeight = shampooElement.offsetHeight;
           const shampooInitialTop = contentTop + shampooTopCSS;
-          const targetY = sectionHeight - shampooInitialTop - (shampooHeight / 2) - 100;
+          const targetY = sectionHeight - shampooInitialTop + shampooHeight;
           return targetY;
         };
         
@@ -122,7 +121,7 @@ window.addEventListener("load", function () {
           scrollTrigger: {
             trigger: sectionElement,
             start: "top 20%", 
-            end: "bottom 50%",
+            end: "bottom 10%",
             scrub: 1,
             invalidateOnRefresh: true
           }
