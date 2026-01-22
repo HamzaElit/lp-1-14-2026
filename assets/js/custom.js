@@ -83,7 +83,7 @@ window.addEventListener("load", function () {
       // Desktop animation
       const desktopAnimation = gsap.to(shampooElement, {
         y: calculateEndY,
-        rotation: -50,
+        rotation: 50,
         ease: "none",
         scrollTrigger: {
           trigger: sectionElement,

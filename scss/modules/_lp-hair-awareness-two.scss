@@ -22,9 +22,6 @@
     color: var(--Black);
     margin: 0;
     max-width: 31.3rem;
-    position: relative;
-    z-index: 10;
-
     @include md-up {
       max-width: 64rem;
     }
